@@ -44,7 +44,7 @@ def print_board():
 
         char=' '
 
-        if i in ('1','2'): char=i;
+        if i in ('+','-'): char=i;
 
         x+=1
 
@@ -54,7 +54,7 @@ def print_board():
 
 def select_char():
 
-    chars=('1','2')
+    chars=('+','-')
 
     if random.randint(0,1) == 0:
 
@@ -174,7 +174,7 @@ def computer_move():
 
 def space_exist():
 
-    return board.count('1') + board.count('2') != 9
+    return board.count('+') + board.count('-') != 9
 
 
 
